@@ -16,8 +16,8 @@ def game():
     score = 0
     step = 0
     t.place_ships(board, ships)
-    formatted_table = tabulate(board, tablefmt="fancy_grid") 
-    print(formatted_table)
+    formatted_table = tabulate(board, tablefmt="fancy_grid") # для разраба отображает расстановку фигур
+    print(formatted_table) # для разраба отображает расстановку фигур
     while sum(row.count(0) for row in board) < 100:
         formatted_table_inv = tabulate(invis_board, tablefmt="fancy_grid")
         formatted_table_inv = formatted_table_inv.replace("Х", f"{Fore.RED}X{Style.RESET_ALL}")
